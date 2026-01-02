@@ -9,7 +9,7 @@ export default function MailingList() {
       className="w-full"
       style={{ backgroundColor: "var(--color-brandGreen)" }}
     >
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-12 py-24">
+      <div className="mx-auto max-w-[1200px] px-6 lg:px-12 py-24">
 
         {/* Text */}
         <FadeUp>
