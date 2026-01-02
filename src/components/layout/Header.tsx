@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <header className="w-full bg-white text-ink font-medium">
       {/* Full-width nav bar */}
-      <nav className="w-full h-[120px]" aria-label="Primary navigation">
+      <nav className="w-full py-2" aria-label="Primary navigation">
         {/* Inner container */}
         <div className="mx-auto h-full flex items-center justify-between px-6 lg:px-24">
           
