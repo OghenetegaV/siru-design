@@ -9,6 +9,7 @@ import StartYourJourney from "@/components/sections/StartYourJourney";
 import BlogPreview from "@/components/sections/BlogPreview";
 import MailingList from "@/components/sections/MailingList";
 import FAQ from "@/components/sections/FAQ";
+import HeroCopy from "@/components/sections/HeroCopy";
 
 /* ----------------------------------------
    SEO METADATA — HOME PAGE

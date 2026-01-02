@@ -29,6 +29,18 @@ const journeys = [
     href: "/services/day-trip",
   },
   {
+    eyebrow: "Extended Design Direction",
+    title: "Short Break",
+    description:
+      "Develop and refine your design direction over a structured period without the full commitment.",
+    points: [
+      "Early concept development",
+      "Initial design refinement",
+      "Projects that need breathing room",
+    ],
+    href: "/services/short-break",
+  },
+  {
     eyebrow: "A fully guided design journey",
     title: "Long Haul",
     description:
@@ -48,7 +60,7 @@ export default function ServicesJourney() {
       className="w-full bg-[var(--color-beige)]"
       aria-labelledby="services-journey-heading"
     >
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-12 pb-12">
+      <div className="mx-auto max-w-[1440px] px-6 lg:px-12 pb-24">
 
         {/* Section header */}
         <FadeUp>
@@ -60,8 +72,8 @@ export default function ServicesJourney() {
           </h2>
         </FadeUp>
 
-        {/* Cards */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Cards - Updated to 4 columns on large screens */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
           {journeys.map((item, index) => (
             <FadeUp key={item.title} delay={index * 0.08}>
               <article
@@ -71,12 +83,13 @@ export default function ServicesJourney() {
                   rounded-[8px]
                   p-8
                   flex flex-col
-                  justify-between
                   shadow-sm
+                  transition-shadow hover:shadow-md
                 "
               >
-                <div>
-                  <p className="text-[12px]  tracking-wide text-center text-[var(--color-ink)]">
+                {/* Content Area */}
+                <div className="flex-grow">
+                  <p className="text-[12px] tracking-wide text-center text-[var(--color-ink)] opacity-70">
                     {item.eyebrow}
                   </p>
 
@@ -84,25 +97,26 @@ export default function ServicesJourney() {
                     {item.title}
                   </h3>
 
-                  <p className="mt-4 text-[15px] leading-relaxed text-[var(--color-ink)]">
+                  <p className="mt-4 text-[15px] leading-relaxed text-[var(--color-ink)]/90 min-h-[60px]">
                     {item.description}
                   </p>
 
                   <div className="mt-6">
-                    <p className="text-[14px] font-medium text-[var(--color-ink)]">
+                    <p className="text-[14px] font-semibold text-[var(--color-ink)] uppercase tracking-tight">
                       What it’s for
                     </p>
 
-                    <ul className="mt-3 space-y-2 text-[14px] text-[var(--color-ink)] list-disc list-inside">
+                    <ul className="mt-3 space-y-2 text-[14px] text-[var(--color-ink)]/80 list-disc list-inside">
                       {item.points.map((point) => (
-                        <li key={point}>{point}</li>
+                        <li key={point} className="leading-snug">{point}</li>
                       ))}
                     </ul>
                   </div>
                 </div>
 
-                <div className="mt-8 text-center">
-                  <Button href={item.href} variant="secondary" className="text-[14px] px-5 py-2">
+                {/* Button Area - Stays at bottom due to flex-grow above */}
+                <div className="mt-10 text-center">
+                  <Button href={item.href} variant="secondary" className="text-[14px] px-5 py-2 w-full sm:w-auto">
                     Start Your Journey
                   </Button>
                 </div>

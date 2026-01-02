@@ -1,6 +1,35 @@
 @import "tailwindcss";
 
 /* =========================
+    Tailwind v4 Theme Extensions
+   ========================= */
+@theme {
+  /* Keyframes */
+  @keyframes fadeInBlur {
+    0% { 
+      filter: blur(12px); 
+      opacity: 0;
+      transform: translateY(10px) scale(0.98);
+    }
+    100% { 
+      filter: blur(0px); 
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  /* Animation Utilities */
+  --animate-fade-in-blur: fadeInBlur 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  --animate-shimmer: shimmer 6s linear;
+}
+
+
+/* =========================
    Design Tokens (Global)
    ========================= */
 

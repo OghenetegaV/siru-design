@@ -23,7 +23,7 @@ export default function DayTripPage() {
       whatYouGet={[
         "Pre-session preparation and agenda",
         "A full day of focused design time",
-        "Layouts, concepts, sketches, and decisions",
+        "Concepts, sketches, and decisions",
         "A post-day summary to carry forward",
       ]}
       duration="1 day"

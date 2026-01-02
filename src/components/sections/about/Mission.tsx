@@ -13,7 +13,7 @@ const missions = [
     image: "/assets/images/about/mission-2.png",
   },
   {
-    title: "We Embrace Authenticity.",
+    title: "We Embrace Authenticity",
     image: "/assets/images/about/mission-3.png",
   },
 ];

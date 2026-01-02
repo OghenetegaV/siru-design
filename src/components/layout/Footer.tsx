@@ -159,7 +159,9 @@ export default function Footer() {
 
         {/* Bottom copyright */}
         <div className="mt-16 text-center text-[13px] text-white/45">
-          <span>© {new Date().getFullYear()} Siru Design Co. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Siru Design Co. All rights reserved. </span>
+          <span><a href="/legal/privacy-policy" className="hover:underline hover:text-white/85">Privacy Policy. </a></span>
+          <span><a href="/legal/terms-of-service" className="hover:underline hover:text-white/85">Terms of Service. </a></span>
         </div>
 
       </div>

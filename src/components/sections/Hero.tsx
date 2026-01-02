@@ -3,6 +3,8 @@
 import { useEffect, useRef } from "react";
 import Button from "@/components/ui/Button";
 import FadeUp from "@/components/motion/FadeUp";
+import BlurReveal from "../motion/BlurReveal";
+import ShimmerText from "../motion/ShimmerText";
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -41,11 +43,10 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 flex h-full items-center justify-center px-6">
         <div className="max-w-[760px] text-center text-white">
-          <FadeUp immediate>
-            <h1 className="text-[44px] sm:text-[56px] lg:text-[64px] font-semibold leading-tight">
-              People. Place. Space.
-            </h1>
-          </FadeUp>
+        <ShimmerText 
+            text="People. Place. Space." 
+            className="text-[44px] sm:text-[56px] lg:text-[64px] font-semibold leading-tight pb-2"
+          />
 
           <FadeUp immediate delay={0.1}>
             <p className="mt-6 text-[18px] sm:text-[22px] leading-relaxed text-white/90">
