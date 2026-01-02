@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import Button from "@/components/ui/Button";
 import FadeUp from "@/components/motion/FadeUp";
-import BlurReveal from "../motion/BlurReveal";
 import ShimmerText from "../motion/ShimmerText";
 
 export default function Hero() {
