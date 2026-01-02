@@ -22,8 +22,8 @@ export default function Header() {
           <Image
             src="/assets/logo/logo.svg"
             alt="Siru Living"
-            width={120}
-            height={120}
+            width={100}
+            height={100}
             className="md:h-[50px] lg:h-[100px]"
             priority
           />
