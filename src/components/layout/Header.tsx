@@ -22,9 +22,9 @@ export default function Header() {
           <Image
             src="/assets/logo/logo.svg"
             alt="Siru Living"
-            width={180}
-            height={50}
-            className="h-[40px] lg:h-[80px] w-auto"
+            width={120}
+            height={120}
+            className="md:h-[50px] lg:h-[100px]"
             priority
           />
           </Link>
@@ -47,7 +47,7 @@ export default function Header() {
 
           {/* Mobile Toggle */}
           <button
-            className="md:hidden"
+            className="md:hidden cursor cursor-pointer"
             onClick={() => setOpen(!open)}
             aria-expanded={open}
             aria-controls="mobile-menu"
