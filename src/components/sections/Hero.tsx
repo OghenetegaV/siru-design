@@ -1,20 +1,36 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Button from "@/components/ui/Button";
 import FadeUp from "@/components/motion/FadeUp";
 
 export default function Hero() {
-  return (
-    <section className="relative w-full h-[85vh] min-h-[640px] overflow-hidden">
+  const videoRef = useRef<HTMLVideoElement>(null);
 
+  useEffect(() => {
+    // Attempt playback on mount
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {
+        console.log("Autoplay blocked (likely Low Power Mode)");
+      });
+    }
+  }, []);
+
+  return (
+    <section 
+      className="relative w-full h-[85vh] min-h-[640px] overflow-hidden bg-cover bg-center"
+      style={{ backgroundImage: "url('/assets/images/hero-fallback.jpg')" }} // The "Static" Fallback
+    >
       {/* Background video */}
       <video
+        ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
+        poster="/assets/images/hero-fallback.jpg" // Shown while loading or if blocked
       >
         <source src="/assets/video/hero.mp4" type="video/mp4" />
       </video>
@@ -25,7 +41,6 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 flex h-full items-center justify-center px-6">
         <div className="max-w-[760px] text-center text-white">
-
           <FadeUp immediate>
             <h1 className="text-[44px] sm:text-[56px] lg:text-[64px] font-semibold leading-tight">
               People. Place. Space.
@@ -44,16 +59,13 @@ export default function Hero() {
               <Button href="/services">
                 Explore Our Services
               </Button>
-
               <Button href="/call-to-action" variant="secondary">
                 Get Started Today
               </Button>
             </div>
           </FadeUp>
-
         </div>
       </div>
-
     </section>
   );
 }
