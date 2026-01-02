@@ -33,8 +33,8 @@ export default function Header() {
           <ul className="hidden md:flex items-center gap-10 lg:gap-24 text-[16px] lg:text-[18px]">
             <li><Link className="hover:text-[var(--color-brand-brown)]" href="/about">About</Link></li>
             <li><Link className="hover:text-[var(--color-brand-brown)]" href="/services">Services</Link></li>
-            <li><Link className="hover:text-[var(--color-brand-brown)]" href="/portfolio">Portfolio</Link></li>
-            <li><Link className="hover:text-[var(--color-brand-brown)]" href="/blog">Blog</Link></li>
+            <li><Link className="hover:text-[var(--color-brand-brown)]" href="/portfolio">Projects</Link></li>
+            <li><Link className="hover:text-[var(--color-brand-brown)]" href="/blog">Journal</Link></li>
             <li><Link className="hover:text-[var(--color-brand-brown)]" href="/contact">Contact</Link></li>
           </ul>
 
@@ -65,8 +65,8 @@ export default function Header() {
           <ul className="flex flex-col gap-6 px-6 py-8 text-[18px]">
             <li><Link className="hover:text-[var(--color-brand-brown)]" href="/about" onClick={closeMenu}>About</Link></li>
             <li><Link className="hover:text-[var(--color-brand-brown)]" href="/services" onClick={closeMenu}>Services</Link></li>
-            <li><Link className="hover:text-[var(--color-brand-brown)]" href="/portfolio" onClick={closeMenu}>Portfolio</Link></li>
-            <li><Link className="hover:text-[var(--color-brand-brown)]" href="/blog" onClick={closeMenu}>Blog</Link></li>
+            <li><Link className="hover:text-[var(--color-brand-brown)]" href="/portfolio" onClick={closeMenu}>Projects</Link></li>
+            <li><Link className="hover:text-[var(--color-brand-brown)]" href="/blog" onClick={closeMenu}>Journal</Link></li>
             <li><Link className="hover:text-[var(--color-brand-brown)]" href="/contact" onClick={closeMenu}>Contact</Link></li>
             <li className="pt-2">
               <Button href="/call-to-action" className="w-full" onClick={closeMenu}>

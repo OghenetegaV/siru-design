@@ -10,7 +10,7 @@ export default function TermsOfService() {
   return (
     <LegalLayout title="Terms of Service" lastUpdated="January 2, 2026">
       <p>
-        These Terms of Service ("Terms") govern your use of the Siru Design Co website 
+        These Terms of Service (&quot;Terms&quot;) govern your use of the Siru Design Co website 
         and our design services. By accessing our Service, you agree to be bound by these Terms.
       </p>
 
@@ -19,19 +19,19 @@ export default function TermsOfService() {
         The following definitions apply to these Terms:
       </p>
       <ul>
-        <li><strong>Company:</strong> Refers to Siru Design Co (referred to as "the Company", "We", "Us" or "Our").</li>
+        <li><strong>Company:</strong> Refers to Siru Design Co (referred to as &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot;).</li>
         <li><strong>Service:</strong> Refers to the Website and the interior design consultancy packages provided.</li>
         <li><strong>You:</strong> Refers to the individual or legal entity accessing the Service.</li>
       </ul>
 
       <h2>2. Design Services & Consultancy</h2>
       <p>
-        Siru Design Co provides various "Journeys" including Short Haul, Day Trip, Short Break, and Long Haul. 
+        Siru Design Co provides various &quot;Journeys&quot; including Short Haul, Day Trip, Short Break, and Long Haul. 
         Each service is subject to its specific scope of work as outlined in your individual service agreement.
       </p>
       <ul>
         <li><strong>Reliance:</strong> Our advice is based on information provided by You. We are not liable for errors resulting from inaccurate measurements or site data provided by the client.</li>
-        <li><strong>Implementation:</strong> Unless "Long Haul" management is contracted, You are responsible for the hiring and management of third-party contractors and the procurement of goods.</li>
+        <li><strong>Implementation:</strong> Unless &quot;Long Haul&quot; management is contracted, You are responsible for the hiring and management of third-party contractors and the procurement of goods.</li>
       </ul>
 
       <h2>3. Intellectual Property</h2>
@@ -46,11 +46,11 @@ export default function TermsOfService() {
 
       <h2>4. Payments and Cancellations</h2>
       <p>
-        Payment terms vary by service. "Day Trip" and "Short Haul" sessions typically require 
+        Payment terms vary by service. &quot;Day Trip&quot; and &quot;Short Haul&quot; sessions typically require 
         payment in full at the time of booking to secure your date.
       </p>
       <ul>
-        <li><strong>Refunds:</strong> Cancellations made within 48 hours of a scheduled "Day Trip" may be subject to a cancellation fee.</li>
+        <li><strong>Refunds:</strong> Cancellations made within 48 hours of a scheduled &quot;Day Trip&quot; may be subject to a cancellation fee.</li>
         <li><strong>Changes:</strong> We reserve the right to amend our pricing and service structures at any time.</li>
       </ul>
 
