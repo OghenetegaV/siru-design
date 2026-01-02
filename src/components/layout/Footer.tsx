@@ -1,13 +1,21 @@
 "use client";
 
 import Link from "next/link";
+import {
+  Instagram,
+  Linkedin,
+  MessageCircle,
+  Facebook,
+  Mail,
+  Newspaper,
+} from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="w-full bg-[var(--color-ink)] text-white">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12 py-16">
 
-        {/* Grid */}
+        {/* Grid Container */}
         <div className="relative grid grid-cols-1 lg:grid-cols-[1.35fr_1fr_1fr_1fr] gap-12 lg:gap-0 text-center lg:text-left">
 
           {/* Column 1 (wider) */}
@@ -79,21 +87,75 @@ export default function Footer() {
           />
 
           {/* Column 4 */}
-          <div className="lg:pl-12">
+{/* Column 4 - Connect */}
+          <div className="lg:pl-12 flex flex-col items-center lg:items-start">
             <h4 className="text-[20px] font-medium text-white/80">
               Connect
             </h4>
 
-            <ul className="mt-6 space-y-4 text-[16px] text-white/60">
-              <li><a href="#" className="hover:text-white/85">Instagram</a></li>
-              <li><a href="#" className="hover:text-white/85">LinkedIn</a></li>
-              <li><a href="#" className="hover:text-white/85">WhatsApp</a></li>
-              <li><a href="#" className="hover:text-white/85">Facebook</a></li>
-              <li><a href="#" className="hover:text-white/85">Email</a></li>
-              <li><a href="#" className="hover:text-white/85">Newsletter Signup</a></li>
+            <ul className="mt-6 space-y-4 text-[16px] text-white/60 w-full">
+              <li>
+                <a
+                  href="#"
+                  className="flex items-center justify-center lg:justify-start gap-3 hover:text-white/85 transition-colors"
+                >
+                  <Instagram className="h-4 w-4 opacity-70" />
+                  <span>Instagram</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  className="flex items-center justify-center lg:justify-start gap-3 hover:text-white/85 transition-colors"
+                >
+                  <Linkedin className="h-4 w-4 opacity-70" />
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  className="flex items-center justify-center lg:justify-start gap-3 hover:text-white/85 transition-colors"
+                >
+                  <MessageCircle className="h-4 w-4 opacity-70" />
+                  <span>WhatsApp</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  className="flex items-center justify-center lg:justify-start gap-3 hover:text-white/85 transition-colors"
+                >
+                  <Facebook className="h-4 w-4 opacity-70" />
+                  <span>Facebook</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="mailto:hello@sirudesign.co"
+                  className="flex items-center justify-center lg:justify-start gap-3 hover:text-white/85 transition-colors"
+                >
+                  <Mail className="h-4 w-4 opacity-70" />
+                  <span>Email</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="/newsletter"
+                  className="flex items-center justify-center lg:justify-start gap-3 hover:text-white/85 transition-colors"
+                >
+                  <Newspaper className="h-4 w-4 opacity-70" />
+                  <span>Newsletter Signup</span>
+                </a>
+              </li>
             </ul>
-          </div>
-        </div>
+          </div>          
+        </div> 
 
         {/* Bottom copyright */}
         <div className="mt-16 text-center text-[13px] text-white/45">
