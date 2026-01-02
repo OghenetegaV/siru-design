@@ -9,7 +9,6 @@ import StartYourJourney from "@/components/sections/StartYourJourney";
 import BlogPreview from "@/components/sections/BlogPreview";
 import MailingList from "@/components/sections/MailingList";
 import FAQ from "@/components/sections/FAQ";
-import HeroCopy from "@/components/sections/HeroCopy";
 
 /* ----------------------------------------
    SEO METADATA — HOME PAGE
@@ -63,7 +62,7 @@ export const metadata: Metadata = {
     siteName: "Siru Design Co",
     images: [
       {
-        url: "/assets/images/og-image.jpg", // must live in /public
+        url: "/assets/images/og-image.jpg", 
         width: 1200,
         height: 630,
         alt: "Siru Design Co interior design studio",
