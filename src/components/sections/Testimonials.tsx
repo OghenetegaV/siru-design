@@ -66,61 +66,60 @@ export default function Testimonials() {
         {/* Grid */}
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((item, index) => (
-            /* Added h-full to FadeUp to ensure the container stretches */
-            <FadeUp key={index} delay={0.15 + index * 0.05} className="h-full">
-              <motion.div
-                whileHover={{
-                  boxShadow: "0 12px 30px rgba(0,0,0,0.08)",
-                }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-                /* Added h-full and flex-col to ensure the card fills the grid space */
-                className="relative flex flex-col h-full rounded-[16px] bg-[#FBFBFB] p-8 shadow-sm"
-              >
-                {/* Quote icon container */}
-                <span className="absolute top-3 left-3 bg-[#F3F3F3] h-[70px] w-[70px] rounded-full flex items-center justify-center">
-                  <motion.div
-                    animate={{ y: [0, -6, 0] }}
-                    transition={{
-                      duration: 3,
-                      ease: "easeInOut",
-                      repeat: Infinity,
-                    }}
-                  >
-                    <Image
-                      src="/assets/icons/quote-icon.svg"
-                      alt="quotation icon"
-                      width={42}
-                      height={42}
-                    />
-                  </motion.div>
-                </span>
-
-                {/* Avatar */}
-                <div className="absolute top-6 right-6 h-[58px] w-[58px] rounded-full overflow-hidden">
-                  <Image
-                    src={item.avatar}
-                    alt={item.author}
-                    width={58}
-                    height={58}
-                  />
-                </div>
-
+            <div key={index} className="flex flex-col h-full">
+              <FadeUp delay={0.15 + index * 0.05}>
                 <motion.div
-                  whileHover={{ scale: 0.97 }}
+                  whileHover={{
+                    boxShadow: "0 12px 30px rgba(0,0,0,0.08)",
+                  }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
-                  /* flex-1 makes the text area expand, pushing the author to the bottom */
-                  className="mt-16 flex-1 flex flex-col justify-between"
+                  className="relative flex flex-col h-full rounded-[16px] bg-[#FBFBFB] p-8 shadow-sm min-h-[320px]"
                 >
-                  <p className="text-[15px] leading-relaxed text-[var(--color-ink)]/80">
-                    {item.quote}
-                  </p>
+                  {/* Quote icon container */}
+                  <span className="absolute top-3 left-3 bg-[#F3F3F3] h-[70px] w-[70px] rounded-full flex items-center justify-center">
+                    <motion.div
+                      animate={{ y: [0, -6, 0] }}
+                      transition={{
+                        duration: 3,
+                        ease: "easeInOut",
+                        repeat: Infinity,
+                      }}
+                    >
+                      <Image
+                        src="/assets/icons/quote-icon.svg"
+                        alt="quotation icon"
+                        width={42}
+                        height={42}
+                      />
+                    </motion.div>
+                  </span>
 
-                  <p className="mt-6 text-[16px] font-semibold text-[var(--color-ink)]">
-                    – {item.author}
-                  </p>
+                  {/* Avatar */}
+                  <div className="absolute top-6 right-6 h-[58px] w-[58px] rounded-full overflow-hidden">
+                    <Image
+                      src={item.avatar}
+                      alt={item.author}
+                      width={58}
+                      height={58}
+                    />
+                  </div>
+
+                  <motion.div
+                    whileHover={{ scale: 0.97 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                    className="mt-16 flex-1 flex flex-col justify-between"
+                  >
+                    <p className="text-[15px] leading-relaxed text-[var(--color-ink)]/80">
+                      {item.quote}
+                    </p>
+
+                    <p className="mt-6 text-[16px] font-semibold text-[var(--color-ink)]">
+                      – {item.author}
+                    </p>
+                  </motion.div>
                 </motion.div>
-              </motion.div>
-            </FadeUp>
+              </FadeUp>
+            </div>
           ))}
         </div>
 
