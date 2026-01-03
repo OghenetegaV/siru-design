@@ -1,4 +1,11 @@
 import ServiceDetail from "@/components/sections/services/ServiceDetail";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Short Haul | A focused Design Boost | Siru Design Co",
+  description:
+    "A fully guided interior design journey for clients seeking depth, coordination, and long-term thinking. From first idea to final delivery.",
+};
 
 export default function ShortHaulPage() {
   return (
@@ -22,7 +29,7 @@ export default function ShortHaulPage() {
       ctaLabel="Start with Short Haul"
       cta="Not sure where to begin?"
       ctaHref="/booking/short-haul"
-      imageSrc="/assets/images/services/short-haul.png"
+      imageSrc="/assets/images/services/short-haul.jpg"
       imageAlt="Interior styled living space"
     />
   );
