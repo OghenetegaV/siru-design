@@ -6,12 +6,12 @@ import FadeUp from "@/components/motion/FadeUp";
 import Button from "@/components/ui/Button";
 
 const projects = [
-  "/assets/images/projects/project-1.png",
+  "/assets/images/projects/project-5.png",
   "/assets/images/projects/project-2.png",
   "/assets/images/projects/project-3.png",
+  "/assets/images/projects/project-4.png",
   "/assets/images/projects/project-1.png",
-  "/assets/images/projects/project-2.png",
-  "/assets/images/projects/project-3.png",
+  "/assets/images/projects/project-6.png",
 ];
 
 export default function FeaturedProjects() {
