@@ -31,6 +31,12 @@ export default function Footer() {
               Thoughtful interior design guided by people, place, and purpose.
             </p>
 
+            {/* Address Added Here */}
+            <p className="mt-4 text-[16px] text-white/50 max-w-[360px] mx-auto lg:mx-0">
+              23 Nine Elms Avenue, PO BOX. UB8 3TJ<br />
+              London, UK
+            </p>
+
             <p className="mt-5 text-[16px] italic leading-relaxed text-white/55 max-w-[380px] mx-auto lg:mx-0">
               Design is a journey — here we help guide it with insight, clarity,
               and careful decisions.
@@ -53,7 +59,7 @@ export default function Footer() {
               <li><Link href="/" className="hover:text-white/85">Home</Link></li>
               <li><Link href="/about" className="hover:text-white/85">About</Link></li>
               <li><Link href="/services" className="hover:text-white/85">Services</Link></li>
-              <li><Link href="/portfolio" className="hover:text-white/85">Projects</Link></li>
+              {/* <li><Link href="/portfolio" className="hover:text-white/85">Projects</Link></li> */}
               <li><Link href="/blog" className="hover:text-white/85">Journal</Link></li>
               <li><Link href="/contact" className="hover:text-white/85">Contact</Link></li>
             </ul>
@@ -73,10 +79,10 @@ export default function Footer() {
 
             <ul className="mt-6 space-y-4 text-[16px] text-white/60">
               <li><Link href="/contact" className="hover:text-white/85">Book a Discovery Call</Link></li>
-              <li><Link href="/services/day-trip" className="hover:text-white/85">Get a Day Trip</Link></li>
-              <li><Link href="/services/short-haul" className="hover:text-white/85">Short Haul</Link></li>
-              <li><Link href="/services/day-trip" className="hover:text-white/85">Day Trip</Link></li>
-              <li><Link href="/services/long-haul" className="hover:text-white/85">Long Haul</Link></li>
+              <li><Link href="/booking/day-trip" className="hover:text-white/85">Get a Day Trip</Link></li>
+              <li><Link href="/booking/short-haul" className="hover:text-white/85">Short Haul</Link></li>
+              <li><Link href="/booking/short-break" className="hover:text-white/85">Short Break</Link></li>
+              <li><Link href="/booking/long-haul" className="hover:text-white/85">Long Haul</Link></li>
             </ul>
           </div>
 
@@ -86,8 +92,7 @@ export default function Footer() {
             style={{ left: "77.01%" }}
           />
 
-          {/* Column 4 */}
-{/* Column 4 - Connect */}
+          {/* Column 4 - Connect */}
           <div className="lg:pl-12 flex flex-col items-center lg:items-start">
             <h4 className="text-[20px] font-medium text-white/80">
               Connect
@@ -96,7 +101,9 @@ export default function Footer() {
             <ul className="mt-6 space-y-4 text-[16px] text-white/60 w-full">
               <li>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/wearesiru"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center lg:justify-start gap-3 hover:text-white/85 transition-colors"
                 >
                   <Instagram className="h-4 w-4 opacity-70" />
@@ -106,7 +113,9 @@ export default function Footer() {
 
               <li>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/sirudesign"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center lg:justify-start gap-3 hover:text-white/85 transition-colors"
                 >
                   <Linkedin className="h-4 w-4 opacity-70" />
@@ -116,7 +125,9 @@ export default function Footer() {
 
               <li>
                 <a
-                  href="#"
+                  href="https://wa.me/447958243633"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center lg:justify-start gap-3 hover:text-white/85 transition-colors"
                 >
                   <MessageCircle className="h-4 w-4 opacity-70" />
@@ -126,7 +137,9 @@ export default function Footer() {
 
               <li>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/sirudesign"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center lg:justify-start gap-3 hover:text-white/85 transition-colors"
                 >
                   <Facebook className="h-4 w-4 opacity-70" />
@@ -136,7 +149,7 @@ export default function Footer() {
 
               <li>
                 <a
-                  href="mailto:hello@sirudesign.co"
+                  href="mailto:info@sirudesign.co?subject=General Inquiry&body=Hello SiRu Design Team,%0D%0A%0D%0AI would like to learn more about your services..."
                   className="flex items-center justify-center lg:justify-start gap-3 hover:text-white/85 transition-colors"
                 >
                   <Mail className="h-4 w-4 opacity-70" />
@@ -145,13 +158,13 @@ export default function Footer() {
               </li>
 
               <li>
-                <a
-                  href="/newsletter"
+                <Link
+                  href="/#mailing-list"
                   className="flex items-center justify-center lg:justify-start gap-3 hover:text-white/85 transition-colors"
                 >
                   <Newspaper className="h-4 w-4 opacity-70" />
                   <span>Newsletter Signup</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>          
@@ -160,8 +173,8 @@ export default function Footer() {
         {/* Bottom copyright */}
         <div className="mt-16 text-center text-[13px] text-white/45">
           <span>© {new Date().getFullYear()} Siru Design Co. All rights reserved. </span>
-          <span><a href="/legal/privacy-policy" className="hover:underline hover:text-white/85">Privacy Policy. </a></span>
-          <span><a href="/legal/terms-of-service" className="hover:underline hover:text-white/85">Terms of Service. </a></span>
+          <span><Link href="/legal/privacy-policy" className="hover:underline hover:text-white/85">Privacy Policy. </Link></span>
+          <span><Link href="/legal/terms-of-service" className="hover:underline hover:text-white/85">Terms of Service. </Link></span>
         </div>
 
       </div>

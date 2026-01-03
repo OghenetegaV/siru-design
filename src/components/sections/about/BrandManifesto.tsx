@@ -9,7 +9,7 @@ export default function BrandManifesto() {
       className="w-full"
       style={{ backgroundColor: "var(--color-brandGreen)" }}
     >
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-12 py-28">
+      <div className="mx-auto max-w-[1440px] px-12 lg:px-24 py-28">
 
         <FadeUp>
           <div className="w-full text-white">
@@ -26,7 +26,7 @@ export default function BrandManifesto() {
             </div>
 
             {/* Manifesto text */}
-            <div className="space-y-5 text-[24px] italic leading-relaxed text-white/85">
+            <div className="space-y-5 text-[19px] sm:text-[21px] lg:text-[22px] italic leading-relaxed text-white/85">
               <p className="italic">
                 We approach design, the way we approach travel — with curiosity,
                 intention, and respect for context.
@@ -56,7 +56,7 @@ export default function BrandManifesto() {
             </div>
 
             {/* Attribution */}
-            <p className="mt-12 text-[32px] italic font-medium text-white/90">
+            <p className="mt-12 text-[20px] sm:text-[22px] lg:text-[24px] italic font-medium text-white/90">
               Brand Manifesto – Design Philosophy
             </p>
 

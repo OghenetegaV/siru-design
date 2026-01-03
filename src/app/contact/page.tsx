@@ -5,27 +5,39 @@ import FadeUp from "@/components/motion/FadeUp";
 import Button from "@/components/ui/Button";
 
 export default function ContactPage() {
+  const adminEmail = "info@sirudesign.co";
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+
+    const body = `Hello SiRu Design,\n\nYou have received a new general inquiry.\n\nFrom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+
+    const mailtoUrl = `mailto:${adminEmail}?subject=General Inquiry - ${name}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
+  };
+
   return (
     <main
-      className="w-full bg-[var(--color-beige)] relative py-24"
+      className="w-full bg-[var(--color-beige)] relative pt-6 md:pt-12"
       aria-labelledby="contact-heading"
     >
-        {/* Decorative chair image — behind content */}
-        <div className="pointer-events-none absolute bottom-0 left-0 z-0 hidden sm:block">
-          <Image
-            src="/assets/images/contact/contact-us-image.png"
-            alt=""
-            width={420}
-            height={420}
-            className="w-[260px] sm:w-[340px] lg:w-[420px]"
-          />
-        </div>
+      {/* Decorative chair image */}
+      {/* <div className="pointer-events-none absolute bottom-0 left-0 z-0 hidden sm:block">
+        <Image
+          src="/assets/images/contact/contact-us-image.png"
+          alt=""
+          width={420}
+          height={420}
+          className="w-[260px] sm:w-[340px] lg:w-[420px]"
+        />
+      </div> */}
+
       <section className="mx-auto max-w-[1440px] px-6 lg:px-12">
-
-        {/* CONTENT (above image) */}
         <div className="relative z-10 pb-20">
-
-          {/* Header */}
           <header className="w-full text-center">
             <FadeUp>
               <h1
@@ -39,18 +51,14 @@ export default function ContactPage() {
             <FadeUp delay={0.1}>
               <p className="mt-4 text-[18px] sm:text-[20px] leading-relaxed text-[var(--color-ink)]/80 max-w-[720px] mx-auto">
                 Whether you’re at the beginning of your journey or ready to move
-                forward, we’d love to hear about your project and guide you
-                toward the most suitable next step.
+                forward, we’d love to hear about your project.
               </p>
             </FadeUp>
           </header>
 
-          {/* Divider */}
           <div className="mx-auto mt-8 h-px w-full bg-[var(--color-brand-brown)]/30" />
 
-          {/* Content grid */}
           <div className="mt-12 grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-16 items-start">
-
             {/* LEFT — Context */}
             <FadeUp>
               <aside className="space-y-10 max-w-[520px]">
@@ -59,17 +67,22 @@ export default function ContactPage() {
                     Contact details
                   </h2>
 
-                  <div className="mt-4 space-y-2 text-[18px] text-[var(--color-ink)]/80">
+                  <div className="mt-4 space-y-4 text-[18px] text-[var(--color-ink)]/80">
                     <p>
-                      Email:{" "}
-                      <a
-                        href="mailto:hello@sirudesign.co"
-                        className="underline underline-offset-4"
-                      >
-                        hello@sirudesign.co
+                      <strong>Email:</strong><br />
+                      <a href={`mailto:${adminEmail}`} className="underline underline-offset-4">
+                        {adminEmail}
                       </a>
                     </p>
-                    <p>Location: London & Remote</p>
+                    <p>
+                      <strong>Phone:</strong><br />
+                      +44 7958 243 633
+                    </p>
+                    <p>
+                      <strong>Studio:</strong><br />
+                      23 Nine Elms Avenue, PO BOX. UB8 3TJ<br />
+                      London & Remote
+                    </p>
                   </div>
                 </div>
 
@@ -77,7 +90,6 @@ export default function ContactPage() {
                   <h2 className="text-[22px] font-semibold text-[var(--color-ink)]">
                     What happens next?
                   </h2>
-
                   <ol className="mt-4 space-y-3 text-[18px] text-[var(--color-ink)]/80 list-decimal list-inside">
                     <li>We review your message.</li>
                     <li>We recommend the best journey for you.</li>
@@ -92,13 +104,10 @@ export default function ContactPage() {
               <form
                 className="bg-white rounded-[16px] p-8 sm:p-10 lg:p-12 space-y-6"
                 aria-label="Contact form"
-                method="post"
+                onSubmit={handleSubmit}
               >
                 <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-[16px] font-medium text-[var(--color-ink)] mb-2"
-                  >
+                  <label htmlFor="name" className="block text-[16px] font-medium text-[var(--color-ink)] mb-2">
                     Full Name
                   </label>
                   <input
@@ -111,10 +120,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-[16px] font-medium text-[var(--color-ink)] mb-2"
-                  >
+                  <label htmlFor="email" className="block text-[16px] font-medium text-[var(--color-ink)] mb-2">
                     Email Address
                   </label>
                   <input
@@ -127,10 +133,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-[16px] font-medium text-[var(--color-ink)] mb-2"
-                  >
+                  <label htmlFor="message" className="block text-[16px] font-medium text-[var(--color-ink)] mb-2">
                     Tell us about your project
                   </label>
                   <textarea
@@ -146,12 +149,11 @@ export default function ContactPage() {
                 </div>
               </form>
             </FadeUp>
-
           </div>
         </div>
       </section>
 
-      {/* SEO schema */}
+      {/* SEO schema updated with info@ address */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -160,9 +162,17 @@ export default function ContactPage() {
             "@type": "Organization",
             name: "Siru Design Co",
             url: "https://sirudesign.co",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "23 Nine Elms Avenue",
+              postOfficeBoxNumber: "UB8 3TJ",
+              addressLocality: "London",
+              addressCountry: "UK"
+            },
             contactPoint: {
               "@type": "ContactPoint",
-              email: "hello@sirudesign.co",
+              telephone: "+44 7958 243 633",
+              email: "info@sirudesign.co",
               contactType: "customer support",
             },
           }),

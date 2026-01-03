@@ -3,7 +3,7 @@ import ServiceDetail from "@/components/sections/services/ServiceDetail";
 export default function ShortHaulPage() {
   return (
     <ServiceDetail
-      breadcrumb="Services / Short Haul"
+      breadcrumb="Short Haul"
       eyebrow="Short Haul"
       title="A focused Design Boost"
       intro="Sometimes you don’t need a full journey — just clarity, reassurance, and expert direction."
@@ -21,7 +21,7 @@ export default function ShortHaulPage() {
       duration="60–90 minutes"
       ctaLabel="Start with Short Haul"
       cta="Not sure where to begin?"
-      ctaHref="/call-to-action"
+      ctaHref="/booking/short-haul"
       imageSrc="/assets/images/services/short-haul.png"
       imageAlt="Interior styled living space"
     />

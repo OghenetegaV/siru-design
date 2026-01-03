@@ -15,13 +15,13 @@ export default function WhoWeAre() {
           {/* Text */}
           <div>
             <FadeUp>
-              <h2 className="text-[56px] font-semibold leading-tight text-white">
+              <h2 className="text-[40px] sm:text-[48px] lg:text-[56px] font-semibold leading-tight text-white">
                 Who are we?
               </h2>
             </FadeUp>
 
             <FadeUp delay={0.1}>
-              <p className="mt-6 text-[22px] leading-relaxed text-white/90 text-justify">
+              <p className="mt-6 text-[18px] sm:text-[19px] lg:text-[20px] leading-relaxed text-white/90 text-justify">
                 SiRu Design is a proudly women-led, culturally conscious,
                 multi-disciplinary design studio working across architecture,
                 interiors, furniture design and integrated art.
@@ -29,7 +29,7 @@ export default function WhoWeAre() {
             </FadeUp>
 
             <FadeUp delay={0.2}>
-              <p className="mt-4 text-[22px] leading-relaxed text-white/90 text-justify">
+              <p className="mt-4 text-[18px] sm:text-[19px] lg:text-[20px] leading-relaxed text-white/90 text-justify">
                 Founded by Sian and Ruth, who met early in their careers designing
                 and delivering kitchens for a major Swedish retailer. After
                 following separate paths across the design industry, they reunited

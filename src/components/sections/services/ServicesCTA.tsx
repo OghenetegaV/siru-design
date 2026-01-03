@@ -43,7 +43,7 @@ export default function ServicesCTA() {
             </div>
 
             {/* RIGHT — Image (≈35%) */}
-            <div className="flex justify-end">
+            <div className="flex justify-end sm:justify-start">
               <div className="relative w-full max-w-[280px] aspect-[4/3] rounded-[12px] overflow-hidden">
                 <Image
                   src="/assets/images/services/services-cta.png"

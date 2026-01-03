@@ -103,11 +103,11 @@ export default function FAQ() {
                           {/* Question text */}
                           <span
                             className={`
-                              text-[16px] truncate
+                              text-[16px] transition-all duration-300
                               ${
                                 isActive
-                                  ? "text-[var(--color-ink)] font-medium"
-                                  : "text-[var(--color-ink)]/70"
+                                  ? "text-[var(--color-ink)] font-medium whitespace-normal" // Full wrap when active
+                                  : "text-[var(--color-ink)]/70 truncate" // Cut off when inactive
                               }
                             `}
                           >

@@ -77,5 +77,33 @@ export const BLOG_POSTS: BlogPost[] = [
       { heading: "The Rhythm of the Day", text: "Designing for the path of the sun ensures that a home feels vibrant at breakfast and intimate at dusk. We map out the light patterns of a room before we ever select a paint color, ensuring the atmosphere shifts naturally with the time of day." },
       { heading: "Shadow and Depth", text: "Where there is light, there must be shadow. Shadows provide depth and soul to an interior. By using directional lighting and textured surfaces, we create a sense of three-dimensional warmth that flat, overhead lighting simply cannot achieve." }
     ]
-  }
+  },
+  {
+  id: "5",
+  slug: "the-funk-and-the-fold",
+  title: "The Funk and the Fold: Bringing Curated Color into Modern Spaces",
+  date: "January 3, 2026",
+  publishedAt: "2026-01-03T10:00:00Z",
+  image: "/assets/images/blog/color.png",
+  excerpt: "Design doesn't have to be quiet to be sophisticated. Discover how to use bold 'funk' and unexpected color palettes to bring character into your home.",
+  categories: ["Interior", "Color"],
+  content: [
+    {
+      heading: "Embracing the Unexpected",
+      text: "Too often, we are taught to fear color, retreating into the safety of greige and off-white. But the most memorable spaces—the ones that feel truly 'funky'—are those that embrace a high-contrast dialogue. A mustard-yellow sideboard against a sage or olive wall creates a rhythmic energy that immediately signals personality and warmth."
+    },
+    {
+      heading: "The Rule of Two",
+      text: "When working with bold hues, try the 'Rule of Two.' Choose two dominant, saturated colors from opposite sides of the color wheel to act as your anchor. In this case, the earthy depth of the green wall provides the perfect stage for the electric pop of the yellow furniture. It’s a balance of grounded nature and human-made vibrance."
+    },
+    {
+      heading: "Character in the Details",
+      text: "Funk is found in the silhouettes. Notice the curve of a mid-century chair or the clean, spherical drop of a pendant light. These geometric shapes act as a visual palette cleanser against the flat planes of the walls. When you combine soulful vintage shapes with contemporary color, you create a space that feels timeless yet entirely of the moment."
+    },
+    {
+      heading: "Curating Your Narrative",
+      text: "Ultimately, adding 'soul' to a room means sourcing pieces that spark joy. Whether it's a found object, a piece of integrated art, or a daring furniture choice, let your space be a reflection of your own journey. Don't be afraid to be loud—often, that's where the most beautiful design conversations happen."
+    }
+  ]
+}
 ];

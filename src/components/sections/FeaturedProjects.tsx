@@ -55,10 +55,10 @@ export default function FeaturedProjects() {
         <div className="flex items-end justify-between gap-6 flex-wrap">
           <FadeUp>
             <div>
-              <h2 className="text-[56px] font-semibold text-[var(--color-ink)]">
+              <h2 className="text-[40px] sm:text-[48px] lg:text-[56px] font-semibold text-[var(--color-ink)]">
                 Featured Projects
               </h2>
-              <p className="mt-2 text-[18px] text-[var(--color-ink)]/70">
+              <p className="mt-2 text-[18px] md:text-[22px] text-[var(--color-ink)]/70">
                 Check out some of our projects
               </p>
             </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import FadeUp from "@/components/motion/FadeUp";
 import Button from "@/components/ui/Button";
 
@@ -42,12 +43,19 @@ export default function ServiceDetail({
         {/* Breadcrumb */}
         <FadeUp>
           <div className="flex items-center gap-4">
-            <span className="text-[12px] tracking-wide text-[var(--color-brand-brown)] whitespace-nowrap">
-              {breadcrumb}
-            </span>
+            <nav className="flex items-center gap-2 text-[12px] tracking-wide text-[var(--color-brand-brown)]  font-medium">
+              <Link 
+                href="/services" 
+                className="hover:opacity-70 hover:underline transition-opacity"
+              >
+                Services
+              </Link>
+              <span>/</span>
+              <span>{breadcrumb}</span>
+            </nav>
             <span className="h-px flex-1 bg-[var(--color-brand-brown)]/30" />
           </div>
-        </FadeUp>
+        </FadeUp> 
 
         {/* Layout */}
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] items-stretch lg:min-h-[780px]">

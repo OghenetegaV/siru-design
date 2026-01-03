@@ -58,7 +58,7 @@ export default function Mission() {
 
         {/* Result text */}
         <FadeUp delay={0.2}>
-          <div className="mt-12 max-w-[820px] space-y-3 text-[24px] text-[var(--color-ink)]/80">
+          <div className="mt-12 max-w-[820px] space-y-3 text-[19px] sm:text-[21px] lg:text-[22px] text-[var(--color-ink)]/80">
             <p className="font-medium text-[var(--color-ink)]">
               The result?
             </p>

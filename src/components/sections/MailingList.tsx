@@ -1,11 +1,24 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import FadeUp from "@/components/motion/FadeUp";
 import Button from "@/components/ui/Button";
 
 export default function MailingList() {
+  const router = useRouter();
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    // You can add your API call logic here (e.g., Mailchimp, ConvertKit)
+    
+    // Redirect to home page
+    router.push("/");
+  };
+
   return (
     <section
+      id="mailing-list"
       className="w-full"
       style={{ backgroundColor: "var(--color-brandGreen)" }}
     >
@@ -13,13 +26,13 @@ export default function MailingList() {
 
         {/* Text */}
         <FadeUp>
-          <h2 className="text-[40px] sm:text-[56px] font-semibold text-white">
+          <h2 className="text-[40px] sm:text-[48px] lg:text-[56px] font-semibold text-white">
             Join our mailing list
           </h2>
         </FadeUp>
 
         <FadeUp delay={0.1}>
-          <p className="mt-4 text-[18px] sm:text-[22px] text-white/80">
+          <p className="mt-4 text-[18px] md:text-[22px] text-white/80">
             Receive considered design thoughts, project stories, and
             behind-the-scenes updates from the studio.
           </p>
@@ -28,6 +41,7 @@ export default function MailingList() {
         {/* FORM */}
         <FadeUp delay={0.2}>
           <form
+            onSubmit={handleSubmit}
             className="
               mt-10
               grid grid-cols-1

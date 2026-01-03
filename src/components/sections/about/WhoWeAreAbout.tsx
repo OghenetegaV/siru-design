@@ -4,7 +4,7 @@ import FadeUp from "@/components/motion/FadeUp";
 export default function AboutPage() {
   return (
     <main className="w-full bg-[var(--color-beige)]">
-      <section className="mx-auto max-w-[1440px] px-6 lg:px-12 py-24">
+      <section className="mx-auto max-w-[1440px] px-6 lg:px-12 pb-24 pt-6 md:pt-12">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 items-start">
 
           {/* LEFT — Images */}
@@ -12,44 +12,48 @@ export default function AboutPage() {
             className="
               grid gap-8
               sm:grid-cols-2
-              lg:grid-cols-[auto_1fr]
+              lg:grid-cols-[auto_auto]
               items-center
               justify-center
+              lg:justify-start
             "
           >
             {/* Portraits column */}
             <div className="flex flex-col gap-6 items-center lg:items-start">
               <FadeUp>
-                <Image
-                  src="/assets/images/about/about-portrait-1.png"
-                  alt="Founder portrait outdoors"
-                  width={300}
-                  height={420}
-                  className="rounded-[12px]"
-                />
+                <div className="relative w-[300px] h-[420px]">
+                  <Image
+                    src="/assets/images/about/about-portrait-1.png"
+                    alt="Founder portrait outdoors"
+                    fill
+                    className="rounded-[12px] object-cover"
+                  />
+                </div>
               </FadeUp>
 
               <FadeUp delay={0.1}>
-                <Image
-                  src="/assets/images/about/about-interior.png"
-                  alt="Interior styling vignette"
-                  width={300}
-                  height={420}
-                  className="rounded-[12px]"
-                />
+                <div className="relative w-[300px] h-[420px]">
+                  <Image
+                    src="/assets/images/about/about-interior.png"
+                    alt="Interior styling vignette"
+                    fill
+                    className="rounded-[12px] object-cover"
+                  />
+                </div>
               </FadeUp>
             </div>
 
-            {/* Second portrait — centered beside on desktop, stacked on mobile */}
+            {/* Second portrait */}
             <FadeUp delay={0.2}>
-              <div className="flex justify-center lg:justify-center">
-                <Image
-                  src="/assets/images/about/about-portrait-2.png"
-                  alt="Founder portrait close-up"
-                  width={300}
-                  height={420}
-                  className="rounded-[12px]"
-                />
+              <div className="flex justify-center lg:justify-start">
+                <div className="relative w-[300px] h-[420px]">
+                  <Image
+                    src="/assets/images/about/about-portrait-2.png"
+                    alt="Founder portrait close-up"
+                    fill
+                    className="rounded-[12px] object-cover"
+                  />
+                </div>
               </div>
             </FadeUp>
           </div>

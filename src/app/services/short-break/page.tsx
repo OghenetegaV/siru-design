@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ShortBreakPage() {
   return (
     <ServiceDetail
-      breadcrumb="Services / Short Break"
+      breadcrumb="Short Break"
       eyebrow="Short Break"
       title="Extended Design Direction"
       intro="More time to explore. Still a defined journey. Short Break is designed for those who value depth and refinement."
@@ -29,7 +29,7 @@ export default function ShortBreakPage() {
       
       ctaLabel="Start with Short Break"
       cta="If you're looking for a confident design framework with room to evolve, a Short Break is your ideal next step."
-      ctaHref="/call-to-action/short-break"
+      ctaHref="/booking/short-break"
       imageSrc="/assets/images/services/short-break.png"
       imageAlt="Refined interior design concept board by Siru Design Co"
     />

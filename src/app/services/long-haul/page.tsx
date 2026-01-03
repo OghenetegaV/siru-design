@@ -13,7 +13,7 @@ export default function LongHaulPage() {
     <>
       {/* Main service section */}
       <ServiceDetail
-        breadcrumb="Services / Long Haul"
+        breadcrumb="Long Haul"
         eyebrow="Long Haul"
         title="A Fully Guided Design Journey"
         intro="For projects that need depth, coordination, and long-term thinking, Long Haul offers a complete end-to-end interior design service."
@@ -32,7 +32,7 @@ export default function LongHaulPage() {
         duration="Investment tailored to scope and scale"
         cta="If you’re planning a longer journey, we’ll guide every step."
         ctaLabel="Start your journey"
-        ctaHref="/call-to-action/long-haul"
+        ctaHref="/booking/long-haul"
         imageSrc="/assets/images/services/long-haul.png"
         imageAlt="Completed contemporary interior design project by Siru Design Co"
       />

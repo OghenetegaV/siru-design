@@ -6,7 +6,7 @@ import FadeUp from "@/components/motion/FadeUp";
 export default function ServicesHero() {
   return (
     <section className="w-full bg-[var(--color-beige)]">
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-12 py-14">
+      <div className="mx-auto max-w-[1440px] px-6 lg:px-12 pt-6 md:pt-12">
         <div className="mx-auto max-w-[760px]">
           {/* IMAGE (separate, its own block) */}
           <FadeUp>

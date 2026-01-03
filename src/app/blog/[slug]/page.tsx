@@ -39,10 +39,19 @@ export default function BlogPostPage({ params }: Props) {
         {/* Breadcrumb */}
         <FadeUp>
           <div className="flex items-center gap-4">
-            <span className="text-[12px] tracking-wide text-[var(--color-brand-brown)] whitespace-nowrap"><span><Link href="/blog" className="text-[12px] tracking-wide text-[var(--color-brand-brown)]  hover:text-[var(--color-brand-brown)] hover:underline transition-colors">Journal</Link></span> / Articles</span>
+            <nav className="flex items-center gap-2 text-[12px] tracking-wide text-[var(--color-brand-brown)]  font-medium">
+              <Link 
+                href="/blog" 
+                className="hover:opacity-70 hover:underline transition-opacity"
+              >
+                Journal
+              </Link>
+              <span>/</span>
+              <span>Article</span>
+            </nav>
             <span className="h-px flex-1 bg-[var(--color-brand-brown)]/30" />
           </div>
-        </FadeUp>        
+        </FadeUp>         
 
         {/* Hero Image - 16:9 Ratio */}
         <div className="relative aspect-[16/9] w-full my-12 overflow-hidden shadow-sm">
@@ -81,23 +90,44 @@ export default function BlogPostPage({ params }: Props) {
           ))}
         </div>
 
-        {/* CTA Section - Strictly matching the brown box in design */}
-        <section className="mt-20 bg-[var(--color-brand-brown)] p-6 md:p-8 rounded-sm flex flex-col md:flex-row justify-between items-center gap-8 text-white">
-          <div className="max-w-md text-center rounded-[8px] md:text-left">
-            <h3 className="text-[22px] md:text-[24px] font-bold mb-3">
-              Considering your own design journey?
-            </h3>
-            <p className="text-[16px] text-white/90 leading-relaxed font-light">
-              Start with a conversation and let&apos;s explore the right route for your project.
-            </p>
+        {/* Fixed Callout */}
+        <FadeUp delay={0.35}>
+          <div className="mt-20 rounded-[8px] bg-[var(--color-brand-brown)] px-10 py-8">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
+
+              {/* Text */}
+              <div className="max-w-[640px]">
+                <h3 className="text-[22px] font-semibold text-white">
+                  Considering your own design journey?
+                </h3>
+                <p className="mt-2 text-[16px] text-white/90">
+                  Start with a conversation and let’s explore the right route for your project.
+                </p>
+              </div>
+
+              {/* Button */}
+              <a
+                href="/call-to-action"
+                className="
+                  inline-flex
+                  items-center
+                  whitespace-nowrap
+                  rounded-[6px]
+                  bg-white
+                  px-6
+                  py-2.5
+                  text-[14px]
+                  font-medium
+                  text-[var(--color-brand-brown)]
+                  transition-opacity
+                  hover:opacity-85
+                "
+              >
+                Start a Journey
+              </a>
+            </div>
           </div>
-          <Link 
-            href="/contact" 
-            className="whitespace-nowrap bg-white text-[var(--color-brand-brown)] px-10 py-4 text-[12px] rounded-[8px] font-bold hover:bg-[#F3EFE9] transition-all duration-300 shadow-lg"
-          >
-            Start a Journey
-          </Link>
-        </section>
+        </FadeUp>
 
       </article>
     </main>
