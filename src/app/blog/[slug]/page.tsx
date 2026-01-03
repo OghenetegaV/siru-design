@@ -6,12 +6,13 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 import FadeUp from "@/components/motion/FadeUp";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 // SEO: Dynamically generates the metadata for each post
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = BLOG_POSTS.find((p) => p.slug === params.slug);
+  const { slug } = await params;
+  const post = BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) return { title: "Post Not Found" };
 
   return {
@@ -25,8 +26,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const post = BLOG_POSTS.find((p) => p.slug === params.slug);
+export default async function BlogPostPage({ params }: Props) {
+  const { slug } = await params;
+  const post = BLOG_POSTS.find((p) => p.slug === slug);
 
   if (!post) {
     notFound();
@@ -107,7 +109,7 @@ export default function BlogPostPage({ params }: Props) {
 
               {/* Button */}
               <a
-                href="/call-to-action"
+                href="/contact"
                 className="
                   inline-flex
                   items-center

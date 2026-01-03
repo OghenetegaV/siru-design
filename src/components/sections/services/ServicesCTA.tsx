@@ -21,8 +21,8 @@ export default function ServicesCTA() {
               items-center
             "
           >
-            {/* LEFT — Text (≈65%) */}
-            <div>
+            {/* LEFT — Text */}
+            <div className="text-center md:text-left">
               <h2 className="text-[24px] sm:text-[28px] font-semibold text-[var(--color-ink)]">
                 Not sure which journey is right?
               </h2>
@@ -32,7 +32,7 @@ export default function ServicesCTA() {
                 on a longer journey. We’ll help you choose the route that fits.
               </p>
 
-              <div className="mt-6">
+              <div className="mt-6 flex justify-center md:justify-start">
                 <Button
                   href="/contact"
                   className="text-[14px] px-5 py-2"
@@ -42,8 +42,8 @@ export default function ServicesCTA() {
               </div>
             </div>
 
-            {/* RIGHT — Image (≈35%) */}
-            <div className="flex justify-end sm:justify-start">
+            {/* RIGHT — Image */}
+            <div className="flex justify-center md:justify-end order-first md:order-none">
               <div className="relative w-full max-w-[280px] aspect-[4/3] rounded-[12px] overflow-hidden">
                 <Image
                   src="/assets/images/services/services-cta.png"

@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import FadeUp from "@/components/motion/FadeUp";
 import Button from "@/components/ui/Button";
 
