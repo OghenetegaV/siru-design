@@ -109,9 +109,10 @@ export default function ServiceDetail({
 
           {/* RIGHT */}
           <FadeUp delay={0.1}>
-            <div className="flex flex-col h-full">
+            <div className="flex flex-col h-full mt-12 lg:mt-0">
 
-              <div className="relative flex-1 w-full mb-6">
+              {/* Added min-h-[350px] for mobile visibility */}
+              <div className="relative flex-1 w-full mb-6 min-h-[350px] lg:min-h-0">
                 <Image
                   src={imageSrc}
                   alt={imageAlt}
@@ -136,7 +137,7 @@ export default function ServiceDetail({
                   </Button>
                 </div>
 
-                <div className="absolute left-0 top-0 h-full w-px bg-[var(--color-brand-brown)]/30" />
+                <div className="absolute left-0 top-0 h-full w-px bg-[var(--color-brand-brown)]/30 hidden lg:block" />
               </div>
 
             </div>
