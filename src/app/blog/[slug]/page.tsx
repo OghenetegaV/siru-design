@@ -88,7 +88,7 @@ export default function BlogPostPage({ params }: Props) {
               Considering your own design journey?
             </h3>
             <p className="text-[16px] text-white/90 leading-relaxed font-light">
-              Start with a conversation and let's explore the right route for your project.
+              Start with a conversation and let&apos;s explore the right route for your project.
             </p>
           </div>
           <Link 
