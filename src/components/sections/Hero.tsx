@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <section 
       className="relative w-full h-[85vh] min-h-[640px] overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: "url('/assets/images/hero-fallback.jpg')" }} // The "Static" Fallback
+      style={{ backgroundImage: "url('/assets/images/hero-fallback.png')" }} // The "Static" Fallback
     >
       {/* Background video */}
       <video
@@ -31,7 +31,7 @@ export default function Hero() {
         loop
         playsInline
         preload="auto"
-        poster="/assets/images/hero-fallback.jpg" // Shown while loading or if blocked
+        poster="/assets/images/hero-fallback.png" // Shown while loading or if blocked
       >
         <source src="/assets/video/hero.mp4" type="video/mp4" />
       </video>
