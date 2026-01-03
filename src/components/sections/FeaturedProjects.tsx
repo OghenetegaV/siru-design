@@ -60,7 +60,7 @@ export default function FeaturedProjects() {
 
   return (
     <section className="w-full bg-[var(--color-beige)] overflow-hidden">
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-12 py-24">
+      <div className="mx-auto max-w-[1440px] px-6 lg:px-12 py-12">
 
         {/* Header */}
         <div className="flex items-end justify-between gap-6 flex-wrap">
@@ -69,7 +69,7 @@ export default function FeaturedProjects() {
               <h2 className="text-[40px] sm:text-[48px] lg:text-[56px] font-semibold text-[var(--color-ink)]">
                 Featured Projects
               </h2>
-              <p className="mt-2 text-[18px] md:text-[22px] text-[var(--color-ink)]/70">
+              <p className="text-[18px] md:text-[22px] text-[var(--color-ink)]/70">
                 Check out some of our projects
               </p>
             </div>
@@ -78,7 +78,7 @@ export default function FeaturedProjects() {
 
         {/* Slider Area */}
         <div
-          className="relative mt-16"
+          className="relative mt-10"
           onMouseEnter={() => (pausedRef.current = true)}
           onMouseLeave={() => (pausedRef.current = false)}
         >
