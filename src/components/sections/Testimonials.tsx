@@ -66,14 +66,15 @@ export default function Testimonials() {
         {/* Grid */}
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((item, index) => (
-            <FadeUp key={index} delay={0.15 + index * 0.05}>
+            /* Added h-full to FadeUp to ensure the container stretches */
+            <FadeUp key={index} delay={0.15 + index * 0.05} className="h-full">
               <motion.div
                 whileHover={{
-                  // backgroundColor: "#F0F0F0",
                   boxShadow: "0 12px 30px rgba(0,0,0,0.08)",
                 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="relative rounded-[16px] bg-[#FBFBFB] p-8 shadow-sm"
+                /* Added h-full and flex-col to ensure the card fills the grid space */
+                className="relative flex flex-col h-full rounded-[16px] bg-[#FBFBFB] p-8 shadow-sm"
               >
                 {/* Quote icon container */}
                 <span className="absolute top-3 left-3 bg-[#F3F3F3] h-[70px] w-[70px] rounded-full flex items-center justify-center">
@@ -107,7 +108,8 @@ export default function Testimonials() {
                 <motion.div
                   whileHover={{ scale: 0.97 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="mt-16"
+                  /* flex-1 makes the text area expand, pushing the author to the bottom */
+                  className="mt-16 flex-1 flex flex-col justify-between"
                 >
                   <p className="text-[15px] leading-relaxed text-[var(--color-ink)]/80">
                     {item.quote}
